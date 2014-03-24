@@ -8,11 +8,10 @@ var app = express();
 // Global config
 app.configure(function() {
   app.set('port', process.env.PORT || 8888);
-  app.set('views', './views');
-  app.set('view engine', 'jade');
   app.use(express.bodyParser());
   app.use(express.methodOverride());
 });
+
 
 // Inject env config
 app.configure('development', require('../config/server').development.bind(null, app, express));
@@ -28,6 +27,6 @@ return server.listen(app.get('port'), function() {
   return console.log('Listening on port ' + app.get('port') + ', Env: ' + app.settings.env);
 });
 
-module.exports = server;
+module.exports = app;
 
 

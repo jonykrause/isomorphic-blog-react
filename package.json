@@ -4,18 +4,13 @@
   "description": "",
   "main": "./app/server/index.js",
   "browser": "./app/client/index.js",
-  "browserify": {
-    "transform": [
-      [
-        "reactify",
-        {
-          "harmony": true
-        }
-      ]
-    ]
-  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-js": "browserify ./app/client/index.js -t reactify | uglifyjs2 -mc unsafe=true > ./public/js/bundle.js",
+    "watch-js": "watchify ./app/client/index.js -t reactify -o ./public/js/bundle.js -dv",
+    "predeploy": "npm run build-js",
+    "clean": "rm ./public/js/bundle.js"
+
   },
   "author": "Jonathan Krause <jony@jonathan-krause.de> (http://jonykrau.se/)",
   "license": "ISC",

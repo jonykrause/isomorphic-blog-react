@@ -1,3 +1,2 @@
-var ReactApp = require('../components/layout');
-
+var ReactApp = require('../components/app');
 module.exports = ReactApp;

@@ -3,36 +3,22 @@
  */
 
 var React = require('react');
-var ReactRouter = require('react-router-component');
-var ReactMount  = require('react/lib/ReactMount');
-var Pages = ReactRouter.Pages;
-var Page = ReactRouter.Page;
-var Home = require('./home');
-
-ReactMount.allowFullPageRender = true;
+var Header = require('./partials/header.js');
+var Footer = require('./partials/footer.js');
 
 var Layout = React.createClass({
   render: function() {
     return (
-      <html>
-        <head>
-          <link rel="stylesheet" href="/style.css" />
-          <script src="/bundle.js" />
-        </head>
-        <Pages className="App" path={this.props.path}>
-          <Page path="/" handler={Home} />
-        </Pages>
-      </html>
+      <div className="page-container">
+        <Header />
+        <div className="page-content l-module">
+          { this.props.children }
+        </div>
+        <Footer />
+      </div>
     );
   }
 });
-
-
-if (typeof window !== 'undefined') {
-  window.onload = function() {
-    React.renderComponent(Layout(), document);
-  }
-}
 
 
 module.exports = Layout;
