@@ -1,18 +1,19 @@
 {
-  "name": "jony-website-react",
+  "author": "Jonathan Krause <jony@jonathan-krause.de> (http://jonykrau.se/)",
+  "name": "personal-website",
   "version": "0.0.0",
   "description": "",
   "main": "./app/server/index.js",
   "browser": "./app/client/index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build-js": "browserify ./app/client/index.js -t reactify | uglifyjs2 -mc unsafe=true > ./public/js/bundle.js",
     "watch-js": "watchify ./app/client/index.js -t reactify -o ./public/js/bundle.js -dv",
-    "predeploy": "npm run build-js",
+    "build-css": "uglifycss ./public/css/*.css > ./public/css/bundle.css",
+    "predeploy": "npm run build-js && npm run build-css",
     "clean": "rm ./public/js/bundle.js"
   },
-  "author": "Jonathan Krause <jony@jonathan-krause.de> (http://jonykrau.se/)",
-  "license": "ISC",
   "dependencies": {
     "express": "~3.5.0",
     "react": "~0.10.0",
@@ -33,5 +34,13 @@
   "devDependencies": {
     "connect-browserify": "~2.0.0",
     "reactify": "~0.10.0"
-  }
+  },
+  "engines": {
+    "node": "~0.10.x"
+  },
+  "subdomain": "jonykrause",
+  "domains": [
+    "jonykrau.se",
+    "www.jonykrau.se"
+  ]
 }
