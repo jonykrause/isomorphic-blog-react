@@ -25,16 +25,16 @@ var ActiveLink = React.createClass({
 var Header = React.createClass({
   render: function() {
     return (
-      <header role="banner" className="page-header l-module"><span className="status">http ✔ (200)</span>
+      <header role="banner" className="page-header l-module">
         <nav role="navigation" className="page-nav">
           <ul className="item-list">
-            <li className="page-nav__index">
+            <li>
               <ActiveLink href="/" activeClassName="is-active">Home</ActiveLink>
             </li>
-            <li className="page-nav__blog">
+            <li>
               <ActiveLink href="/posts" activeClassName="is-active">Blog</ActiveLink>
             </li>
-            <li className="page-nav__about">
+            <li>
               <ActiveLink href="/about" activeClassName="is-active">About</ActiveLink>
             </li>
             <li>

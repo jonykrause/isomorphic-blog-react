@@ -27,7 +27,8 @@
     "marked": "~0.3.2",
     "yamlhead": "~0.1.0",
     "superagent": "~0.17.0",
-    "http-proxy": "~1.0.3"
+    "http-proxy": "~1.0.3",
+    "rss": "~0.3.2"
   },
   "devDependencies": {
     "connect-browserify": "~2.0.0",

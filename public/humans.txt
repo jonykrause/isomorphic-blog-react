@@ -1,0 +1,13 @@
+# Check out humanstxt.org if you ask yourself what this is.
+
+# TEAM
+  Jonathan Krause
+  Site: jonykrau.se
+  Twitter: @jonykrause
+  Location: Berlin, Germany
+
+# SITE
+  Standards: HTML5, CSS3, React
+  Software: Vim
+
+
