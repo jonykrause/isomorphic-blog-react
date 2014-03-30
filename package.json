@@ -1,10 +1,9 @@
 {
   "author": "Jonathan Krause <jony@jonathan-krause.de> (http://jonykrau.se/)",
   "name": "personal-website",
-  "version": "0.1.0-203",
+  "version": "0.1.0-210",
   "description": "",
-  "main": "./app/server/index.js",
-  "browser": "./app/client/index.js",
+  "main": "./index.js",
   "scripts": {
     "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -17,12 +16,10 @@
   "dependencies": {
     "express": "~3.5.0",
     "react": "~0.10.0",
-    "director": "~1.2.3",
     "react-async": "~0.8.0",
     "node-jsx": "~0.9.0",
     "react-router-component": "~0.15.0",
     "fibers": "~1.0.1",
-    "react-marked": "~0.3.1",
     "slug": "~0.4.2",
     "highlight.js": "~8.0.0",
     "marked": "~0.3.2",

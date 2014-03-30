@@ -9,7 +9,7 @@ var Link = ReactRouter.Link;
 var ActiveLink = React.createClass({
   mixins: [ReactRouter.NavigatableMixin],
   isActive: function() {
-    return this.getPath() === this.props.href
+    return this.getPath() === this.props.href || this.getPath().indexOf(this.props.href) != -1 && this.props.href != '/';
   },
   render: function() {
     var className;
