@@ -1,3 +1,4 @@
+var fs = require('fs');
 var staticDir = './public';
 var logFilePath = './log.log';
 
