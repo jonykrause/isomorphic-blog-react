@@ -12,6 +12,8 @@ app.configure(function() {
   app.use(express.methodOverride());
 });
 
+// Inject API
+require('./api')(app);
 
 // Inject env config
 app.configure('development', require('../config/server').development.bind(null, app, express));

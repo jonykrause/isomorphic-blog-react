@@ -365,7 +365,8 @@
    margin-right: 0.93125em;
 }
 /* line 62, ../../../src/client/stylesheets/partials/base.sass */
- .page--index .page-nav__index a, .page--index .page-nav__index a:visited, .page--blog .page-nav__blog a, .page--blog .page-nav__blog a:visited, .page--post .page-nav__blog a, .page--post .page-nav__blog a:visited, .page--about .page-nav__about a, .page--about .page-nav__about a:visited {
+a.is-active,
+a.is-active:visited {
    font-family: "TundraWebProBold", Georgia, Times, serif;
    color: #1a1a1a;
 }

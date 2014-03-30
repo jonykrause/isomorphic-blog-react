@@ -5,6 +5,7 @@
 var React = require('react');
 var Layout = require('../layout');
 
+// TODO: Make regular pages available in API
 var About = React.createClass({
   render: function() {
     return (

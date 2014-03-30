@@ -6,21 +6,36 @@ var React = require('react');
 var ReactRouter = require('react-router-component');
 var Link = ReactRouter.Link;
 
-var Header = React.createClass({
+var ActiveLink = React.createClass({
+  mixins: [ReactRouter.NavigatableMixin],
+  isActive: function() {
+    return this.getPath() === this.props.href
+  },
+  render: function() {
+    var className;
+    if (this.props.activeClassName && this.isActive()) {
+      className = this.props.activeClassName
+    }
+    var link = Link({className: className}, this.props.children)
+    return this.transferPropsTo(link)
+  }
+});
 
+
+var Header = React.createClass({
   render: function() {
     return (
       <header role="banner" className="page-header l-module"><span className="status">http ✔ (200)</span>
         <nav role="navigation" className="page-nav">
           <ul className="item-list">
             <li className="page-nav__index">
-              <Link href="/">Home</Link>
+              <ActiveLink href="/" activeClassName="is-active">Home</ActiveLink>
             </li>
             <li className="page-nav__blog">
-              <Link href="/posts">Blog</Link>
+              <ActiveLink href="/posts" activeClassName="is-active">Blog</ActiveLink>
             </li>
             <li className="page-nav__about">
-              <Link href="/about">About</Link>
+              <ActiveLink href="/about" activeClassName="is-active">About</ActiveLink>
             </li>
             <li>
               <a href="https://twitter.com/jonykrause">Twitter</a>

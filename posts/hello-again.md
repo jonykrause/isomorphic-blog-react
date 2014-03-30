@@ -1,0 +1,8 @@
+date: 2013-02-08
+title: Hello again, world!
+---
+
+It has been a while since my last post here. Many exciting things happened in the last one and a half years. I moved to Berlin from southern Germany’s countryside, started a new job, met awesome people and learned a lot. At this point many shoutouts to all of you crazy guys getting me there, especially to the great folks at Edenspiekermann. Although I think it’s important to strengthen the german community, I want to force myself to write English here to improve my language skills and to be able to participate in the international conversation. So it’s planned to put some thoughts in here from time to time. Let’s see how this goes :)
+
+Some words on the new website — well, visually there’s not much to say, no fancy things are going on, just text. Technically there are a few things that might be interesting. With more and more front-end tools powered by [Node.js](http://nodejs.org/), I recently took a closer look at it. Of course, the first thing you do when you experiment with a new technology is to hack your own website. I used [Express.js](http://expressjs.com) and glued together a few things. It may not be the most accurate tool for this job but I wanted to have a new playground and at least it was fun to build. The blog basically is a static site generator powered by Markdown files. The base scaffolding can be found [here](https://github.com/jonykrause/express-jade-coffee-compass-mocha). It’s currently deployed on [Nodejitsu](http://nodejitsu.com/) which is super comfortable to use. Think I’ll write a more detailed blog post about used techniques and tools in the near future.
+

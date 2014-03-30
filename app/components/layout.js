@@ -3,8 +3,8 @@
  */
 
 var React = require('react');
-var Header = require('./partials/header.js');
-var Footer = require('./partials/footer.js');
+var Header = require('./pages/partials/header.js');
+var Footer = require('./pages/partials/footer.js');
 
 var Layout = React.createClass({
   render: function() {
