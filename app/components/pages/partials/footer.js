@@ -36,7 +36,7 @@ var VCard = React.createClass({
     return (
       <div itemscope="" itemtype="http://schema.org/Person" className="vcard">
         <figure className="myface">
-          <img alt="Picture of Jonathan Krause" width="66" height="66" src="img/jony-small.jpg" />
+          <img alt="Picture of Jonathan Krause" width="66" height="66" src="/img/jony-small.jpg" />
         </figure>
         <Adress />
       </div>

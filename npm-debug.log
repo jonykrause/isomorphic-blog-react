@@ -1,0 +1,29 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/Users/Jonathan/.nvm/v0.10.26/bin/node',
+1 verbose cli   '/Users/Jonathan/.nvm/v0.10.26/bin/npm',
+1 verbose cli   'run',
+1 verbose cli   'watch-js' ]
+2 info using npm@1.4.3
+3 info using node@v0.10.26
+4 verbose run-script [ 'prewatch-js', 'watch-js', 'postwatch-js' ]
+5 info prewatch-js personal-website-react@0.1.0-222
+6 info watch-js personal-website-react@0.1.0-222
+7 verbose unsafe-perm in lifecycle true
+8 info personal-website-react@0.1.0-222 Failed to exec watch-js script
+9 error personal-website-react@0.1.0-222 watch-js: `watchify ./app/client/index.js -t reactify -o ./public/js/bundle.js -dv`
+9 error Exit status 8
+10 error Failed at the personal-website-react@0.1.0-222 watch-js script.
+10 error This is most likely a problem with the personal-website-react package,
+10 error not with npm itself.
+10 error Tell the author that this fails on your system:
+10 error     watchify ./app/client/index.js -t reactify -o ./public/js/bundle.js -dv
+10 error You can get their info via:
+10 error     npm owner ls personal-website-react
+10 error There is likely additional logging output above.
+11 error System Darwin 13.1.0
+12 error command "/Users/Jonathan/.nvm/v0.10.26/bin/node" "/Users/Jonathan/.nvm/v0.10.26/bin/npm" "run" "watch-js"
+13 error cwd /Users/Jonathan/Projects/jony-website-react
+14 error node -v v0.10.26
+15 error npm -v 1.4.3
+16 error code ELIFECYCLE
+17 verbose exit [ 1, true ]

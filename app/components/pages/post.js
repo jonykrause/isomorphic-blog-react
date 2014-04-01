@@ -7,14 +7,14 @@ var React = require('react');
 var ReactAsync  = require('react-async');
 var FormattedDate = require('./partials/formattedDate');
 var ReactRouter = require('react-router-component');
-var apiClient = require('../../server/apiClient');
+var api = require('../../../lib/cache');
 var Layout = require('../layout');
 
 var Post = React.createClass({
   mixins: [ReactAsync.Mixin],
 
   getInitialStateAsync: function (callback) {
-    apiClient.get('/api/posts/' + this.props.slug, function(err, res){
+    api.get('/api/posts/' + this.props.slug, function(err, res){
       if (err) return callback(err);
       return callback(null, res.body[0]);
     });

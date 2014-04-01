@@ -1,11 +1,10 @@
 {
   "author": "Jonathan Krause <jony@jonathan-krause.de> (http://jonykrau.se/)",
-  "name": "personal-website",
-  "version": "0.1.0-210",
+  "name": "personal-website-react",
+  "version": "0.1.0-222",
   "description": "",
-  "main": "./index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build-js": "browserify ./app/client/index.js -t reactify | uglifyjs2 -mc unsafe=true > ./public/js/bundle.js",
     "watch-js": "watchify ./app/client/index.js -t reactify -o ./public/js/bundle.js -dv",
@@ -34,11 +33,7 @@
     "reactify": "~0.10.0"
   },
   "engines": {
-    "node": "~0.10.x"
+    "node": "~0.10.26"
   },
-  "subdomain": "jonykrause",
-  "domains": [
-    "jonykrau.se",
-    "www.jonykrau.se"
-  ]
+  "subdomain": "jonykrause-react"
 }

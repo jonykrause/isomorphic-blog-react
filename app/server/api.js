@@ -1,5 +1,4 @@
 var path = require('path');
-var httpProxy = require('http-proxy');
 var getPosts = require('../../lib/getPosts');
 var DIR = path.resolve(__dirname, '../../posts');
 
@@ -26,20 +25,4 @@ module.exports = function(app) {
     })
     .catch(logError)
   });
-
-  /**
-   * On the client, we want to be able to just send API requests to the
-   * main web server using a relative URL, so we proxy requests to the
-   * API server here.
-   */
-  // var proxy = new httpProxy.RoutingProxy();
-
-  // app.proxyMiddleware = function(apiPort) {
-  //   return function(req, res, next) {
-  //     proxy.proxyRequest(req, res, {
-  //       host: 'localhost',
-  //       port: apiPort
-  //     });
-  //   };
-  // };
 }

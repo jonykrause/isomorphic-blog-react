@@ -8,7 +8,8 @@ var app = express();
 // Global config
 app.configure(function() {
   app.set('port', process.env.PORT || 8888);
-  app.use(express.bodyParser());
+  app.use(express.json());
+  app.use(express.urlencoded());
   app.use(express.methodOverride());
 });
 
