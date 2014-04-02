@@ -375,6 +375,10 @@ a.is-active:visited {
    margin: 0 auto;
    width: 95%;
 }
+
+.page-content {
+  min-height: 600px;
+}
 /* line 71, ../../../src/client/stylesheets/partials/base.sass */
  .page-footer {
    padding-top: 3.725em;
@@ -735,13 +739,6 @@ a.is-active:visited {
      animation-iteration-count: 1;
   }
 }
-/* line 1, ../../../src/client/stylesheets/partials/highlight.scss */
- .highlight {
-   font-size: 0.7em;
-   min-width: 500px;
-   width: 50em;
-   margin-bottom: 0.93125em;
-}
 /* line 15, ../../../src/client/stylesheets/partials/highlight.scss */
  code {
    font-family: Courier, monospace;
@@ -759,84 +756,101 @@ a.is-active:visited {
    background: #f5f5f5;
    margin-left: -3.5em;
    border: 1px solid #cecece;
+   font-size: 0.7em;
+   min-width: 500px;
+   width: 50em;
+   padding-top: 1em;
+   padding-bottom: 1em;
+   padding-left: 1em;
+   margin-bottom: 0.93125em;
 }
-/* line 36, ../../../src/client/stylesheets/partials/highlight.scss */
- pre .comment, pre .template_comment, pre .diff .header, pre .javadoc {
-   color: #666;
-   font-style: italic;
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-title {
+  color: #8e908c;
 }
-/* line 48, ../../../src/client/stylesheets/partials/highlight.scss */
- pre .keyword, pre .css .rule .keyword, pre .winutils, pre .javascript .title, pre .nginx .title, pre .subst, pre .request, pre .status {
-   color: #333;
-   font-weight: bold;
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-attribute,
+.hljs-tag,
+.hljs-regexp,
+.ruby .hljs-constant,
+.xml .hljs-tag .hljs-title,
+.xml .hljs-pi,
+.xml .hljs-doctype,
+.html .hljs-doctype,
+.css .hljs-id,
+.css .hljs-class,
+.css .hljs-pseudo {
+  color: #c82829;
 }
-/* line 55, ../../../src/client/stylesheets/partials/highlight.scss */
- pre .number, pre .hexcolor, pre .ruby .constant {
-   color: #099;
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-preprocessor,
+.hljs-pragma,
+.hljs-built_in,
+.hljs-literal,
+.hljs-params,
+.hljs-constant {
+  color: #f5871f;
 }
-/* line 62, ../../../src/client/stylesheets/partials/highlight.scss */
- pre .string, pre .tag .value, pre .phpdoc, pre .tex .formula {
-   color: #d14;
+
+/* Tomorrow Yellow */
+.ruby .hljs-class .hljs-title,
+.css .hljs-rules .hljs-attribute {
+  color: #eab700;
 }
-/* line 67, ../../../src/client/stylesheets/partials/highlight.scss */
- pre .title, pre .id {
-   color: #900;
-   font-weight: bold;
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-value,
+.hljs-inheritance,
+.hljs-header,
+.ruby .hljs-symbol,
+.xml .hljs-cdata {
+  color: #718c00;
 }
-/* line 75, ../../../src/client/stylesheets/partials/highlight.scss */
- pre .javascript .title, pre .lisp .title, pre .clojure .title, pre .subst {
-   font-weight: normal;
+
+/* Tomorrow Aqua */
+.css .hljs-hexcolor {
+  color: #3e999f;
 }
-/* line 82, ../../../src/client/stylesheets/partials/highlight.scss */
- pre .class .title, pre .haskell .type, pre .vhdl .literal, pre .tex .command {
-   color: #458;
-   font-weight: bold;
+
+/* Tomorrow Blue */
+.hljs-function,
+.python .hljs-decorator,
+.python .hljs-title,
+.ruby .hljs-function .hljs-title,
+.ruby .hljs-title .hljs-keyword,
+.perl .hljs-sub,
+.javascript .hljs-title,
+.coffeescript .hljs-title {
+  color: #4271ae;
 }
-/* line 90, ../../../src/client/stylesheets/partials/highlight.scss */
- pre .tag, pre .tag .title, pre .rules .property, pre .django .tag .keyword {
-   color: #000080;
-   font-weight: normal;
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.javascript .hljs-function {
+  color: #8959a8;
 }
-/* line 97, ../../../src/client/stylesheets/partials/highlight.scss */
- pre .attribute, pre .variable, pre .lisp .body {
-   color: #008080;
+
+.hljs {
+  display: block;
+  background: white;
+  color: #4d4d4c;
+  padding: 0.5em;
 }
-/* line 101, ../../../src/client/stylesheets/partials/highlight.scss */
- pre .regexp {
-   color: #009926;
+
+.coffeescript .javascript,
+.javascript .xml,
+.tex .hljs-formula,
+.xml .javascript,
+.xml .vbscript,
+.xml .css,
+.xml .hljs-cdata {
+  opacity: 0.5;
 }
-/* line 105, ../../../src/client/stylesheets/partials/highlight.scss */
- pre .class {
-   color: #458;
-   font-weight: bold;
-}
-/* line 114, ../../../src/client/stylesheets/partials/highlight.scss */
- pre .symbol, pre .ruby .symbol .string, pre .lisp .keyword, pre .tex .special, pre .prompt {
-   color: #990073;
-}
-/* line 120, ../../../src/client/stylesheets/partials/highlight.scss */
- pre .built_in, pre .lisp .title, pre .clojure .built_in {
-   color: #0086b3;
-}
-/* line 128, ../../../src/client/stylesheets/partials/highlight.scss */
- pre .preprocessor, pre .pi, pre .doctype, pre .shebang, pre .cdata {
-   color: #999;
-   font-weight: bold;
-}
-/* line 133, ../../../src/client/stylesheets/partials/highlight.scss */
- pre .deletion {
-   background: #fdd;
-}
-/* line 137, ../../../src/client/stylesheets/partials/highlight.scss */
- pre .addition {
-   background: #dfd;
-}
-/* line 141, ../../../src/client/stylesheets/partials/highlight.scss */
- pre .diff .change {
-   background: #0086b3;
-}
-/* line 145, ../../../src/client/stylesheets/partials/highlight.scss */
- pre .chunk {
-   color: #aaa;
-}
- 

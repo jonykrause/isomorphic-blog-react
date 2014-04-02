@@ -1,7 +1,7 @@
 {
   "author": "Jonathan Krause <jony@jonathan-krause.de> (http://jonykrau.se/)",
   "name": "personal-website-react",
-  "version": "0.1.0-222",
+  "version": "0.1.0-225",
   "description": "",
   "scripts": {
     "start": "index.js",

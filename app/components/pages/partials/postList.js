@@ -5,8 +5,8 @@
 var React = require('react');
 var ReactAsync  = require('react-async');
 var ReactRouter = require('react-router-component');
-var Post = require('./postItem');
-var api = require('../../../../lib/cache');
+var PostItem = require('./postItem');
+var api = require('../../../../lib/apiCache');
 var isServer = require('../../../../lib/isServer');
 
 
@@ -26,16 +26,11 @@ var Posts = React.createClass({
     });
   },
 
- sortByDate: function(arr) {
-  return arr.sort(function(a, b) {
-    return new Date(b.date) - new Date(a.date);
-  });
- },
 
  render: function() {
-    var posts = this.state.posts ? this.sortByDate(this.state.posts).map(function(post, i) {
+    var posts = this.state.posts ? this.state.posts.map(function(post, i, posts) {
       if (!this.props.itemCount || i < this.props.itemCount) {
-        return <Post key={i} linkpost={post.linkpost} title={post.title} date={post.date} slug={post.slug} />;
+        return <PostItem key={i} linkpost={post.linkpost} title={post.title} date={post.date} slug={post.slug} />;
       }
     }.bind(this)) : 'Loading...';
     return (
